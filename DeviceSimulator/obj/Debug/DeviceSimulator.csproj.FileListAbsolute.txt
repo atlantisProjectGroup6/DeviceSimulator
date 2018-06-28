@@ -1,0 +1,6 @@
+D:\Cours\Exia\A4\DeviceSimulator\DeviceSimulator\bin\Debug\DeviceSimulator.exe.config
+D:\Cours\Exia\A4\DeviceSimulator\DeviceSimulator\bin\Debug\DeviceSimulator.exe
+D:\Cours\Exia\A4\DeviceSimulator\DeviceSimulator\bin\Debug\DeviceSimulator.pdb
+D:\Cours\Exia\A4\DeviceSimulator\DeviceSimulator\obj\Debug\DeviceSimulator.csprojResolveAssemblyReference.cache
+D:\Cours\Exia\A4\DeviceSimulator\DeviceSimulator\obj\Debug\DeviceSimulator.exe
+D:\Cours\Exia\A4\DeviceSimulator\DeviceSimulator\obj\Debug\DeviceSimulator.pdb
