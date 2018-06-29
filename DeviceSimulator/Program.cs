@@ -8,8 +8,12 @@ namespace DeviceSimulator
 {
     class Program
     {
+        private static string url = "http://192.168.0.10:21080/AtlantisJavaEE-war/services/mobile";
         static void Main(string[] args)
         {
+            Connection connection = new Connection(url);
+            //connection.sendData(httpVerb.POST, "/user/users", "{\"id\":100001,\"name\":\"TestPost\"}");
+
             bool doRun = true;
             while (doRun)
             {
@@ -47,49 +51,49 @@ namespace DeviceSimulator
                 {
                     case 1:
                         Console.WriteLine("Presence Sensor");
-                        Generators.GeneratePresenceSensor(occ);
+                        Generators.GeneratePresenceSensor(occ,connection);
                         Console.WriteLine("Press anywhere to get back to the menu");
                         Console.ReadLine();
                         break;
                     case 2:
                         Console.WriteLine("Temperature Sensor");
-                        Generators.GenerateTemperatureSensor(occ);
+                        Generators.GenerateTemperatureSensor(occ,connection);
                         Console.WriteLine("Press anywhere to get back to the menu");
                         Console.ReadLine();
                         break;
                     case 3:
                         Console.WriteLine("Light Sensor");
-                        Generators.GenerateLightSensor(occ);
+                        Generators.GenerateLightSensor(occ,connection);
                         Console.WriteLine("Press anywhere to get back to the menu");
                         Console.ReadLine();
                         break;
                     case 4:
                         Console.WriteLine("Atmospheric Pressure Sensor");
-                        Generators.GenerateAtmosphericPressureSensor(occ);
+                        Generators.GenerateAtmosphericPressureSensor(occ,connection);
                         Console.WriteLine("Press anywhere to get back to the menu");
                         Console.ReadLine();
                         break;
                     case 5:
                         Console.WriteLine("Humidity Sensor");
-                        Generators.GenerateHumiditySensor(occ);
+                        Generators.GenerateHumiditySensor(occ,connection);
                         Console.WriteLine("Press anywhere to get back to the menu");
                         Console.ReadLine();
                         break;
                     case 6:
                         Console.WriteLine("Sound Level Sensor");
-                        Generators.GenerateSoundLevelSensor(occ);
+                        Generators.GenerateSoundLevelSensor(occ,connection);
                         Console.WriteLine("Press anywhere to get back to the menu");
                         Console.ReadLine();
                         break;
                     case 7:
                         Console.WriteLine("GPS Sensor");
-                        Generators.GenerateGPSSensor(occ);
+                        Generators.GenerateGPSSensor(occ,connection);
                         Console.WriteLine("Press anywhere to get back to the menu");
                         Console.ReadLine();
                         break;
                     case 8:
                         Console.WriteLine("CO2 Level Sensor");
-                        Generators.GenerateCO2LevelSensor(occ);
+                        Generators.GenerateCO2LevelSensor(occ,connection);
                         Console.WriteLine("Press anywhere to get back to the menu");
                         Console.ReadLine();
                         break;
