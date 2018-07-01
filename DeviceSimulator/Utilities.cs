@@ -22,6 +22,10 @@ namespace DeviceSimulator
         }
 
         public static Dictionary<string, string> macsPresence = new Dictionary<string, string>() {
+            {"7D:D4:B7:A3:C6:E8","Presence sensor corridor"},
+            {"3D:E6:C4:C4:S6:A8","Presence sensor elevator"},
+            {"4C:67:2A:FB:1B:4E","Presence sensor meeting room"},
+            {"4A:1B:DC:32:8E:2E","Presence sensor garage"},
             {"B9:D0:C3:8E:34:8E","Presence sensor corridor"},
             {"3F:1C:77:C4:A7:6E","Presence sensor elevator"},
             {"C4:67:2A:FB:1B:4E","Presence sensor meeting room"},

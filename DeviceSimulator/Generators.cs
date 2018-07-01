@@ -204,7 +204,12 @@ namespace DeviceSimulator
 
                 Console.WriteLine(json);
                 Thread.Sleep(500);
-                Task.Run(() => connection.sendData(httpVerb.POST, "/addMetric", json.ToString()));
+
+                //JEE :
+                Task.Run(() => connection.sendData(httpVerb.POST, "/JEEUpdate", json.ToString()));
+
+                //.NET :
+                //Task.Run(() => connection.sendData(httpVerb.POST, "/addMetric", json.ToString()));
 
                 json.Clear();
             }

@@ -8,11 +8,14 @@ namespace DeviceSimulator
 {
     class Program
     {
-        private static string url = "http://192.168.0.10:21080/AtlantisJavaEE-war/services/mobile";
+        //JEE :
+        //private static string url = "http://192.168.0.10:21080/AtlantisJavaEE-war/services/mobile";
+
+        //.NET :
+        private static string url = "http://192.168.0.26:52282/CalculationEndpoint.svc";
         static void Main(string[] args)
         {
             Connection connection = new Connection(url);
-            //connection.sendData(httpVerb.POST, "/user/users", "{\"id\":100001,\"name\":\"TestPost\"}");
 
             bool doRun = true;
             while (doRun)
