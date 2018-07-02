@@ -12,7 +12,7 @@ namespace DeviceSimulator
         //private static string url = "http://192.168.0.10:21080/AtlantisJavaEE-war/services/mobile";
 
         //.NET :
-        private static string url = "http://192.168.0.26:52282/CalculationEndpoint.svc";
+        private static string url = "http://192.168.43.21:52282/CalculationEndpoint.svc";
         static void Main(string[] args)
         {
             Connection connection = new Connection(url);

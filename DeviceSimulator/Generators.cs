@@ -122,12 +122,12 @@ namespace DeviceSimulator
                 var CoordNS = r.Next(0, 2) == 1 ? "N" : "S";
                 var CoordLatA = r.Next(0, 90);
                 var CoordLatB = r.Next(0, 60);
-                var CoordLatC = Math.Round(r.NextDouble() * 60, 4);
+                var CoordLatC = Math.Round(r.NextDouble() * 60, 4).ToString().Replace(",", string.Empty);
                 var CoordEW = r.Next(0, 2) == 1 ? "E" : "W";
                 var CoordLongA = r.Next(0, 180);
                 var CoordLongB = r.Next(0, 60);
-                var CoordLongC = Math.Round(r.NextDouble() * 60, 4);
-                var value = new StringBuilder().Append(CoordNS).Append(CoordLatA + "°").Append(CoordLatB + "\'").Append(CoordLatC + "\'' ").Append(CoordEW).Append(CoordLongA + "°").Append(CoordLongB + "\'").Append(CoordLongC + "\''");
+                var CoordLongC = Math.Round(r.NextDouble() * 60, 4).ToString().Replace(",", string.Empty);
+                var value = new StringBuilder().Append(CoordLatA).Append(CoordLatB).Append(CoordLatC).Append(CoordNS + ",").Append(CoordLongA).Append(CoordLongB).Append(CoordLongC).Append(CoordEW);
                 metrics.Add(new Metric(mac, (long)timestamp, value.ToString(), 7, name));
                 //Thread.Sleep(1000);
                 //Console.WriteLine("Simulation " + i + " : Mac = " + mac + " - Timestamp = " + timestamp + " - Value = " + value + " - Type = 7");
